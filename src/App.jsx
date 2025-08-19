@@ -9,16 +9,14 @@ import { RequestAirdrop } from "./airdrop";
 function App() {
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-
+  const rpcURL = import.meta.env.VITE_RPC_URL || endpoint;
   return (
-    <ConnectionProvider endpoint={"https://solana-devnet.g.alchemy.com/v2/V2O-WWPQn9hNVj25_ON6z"}>
+    <ConnectionProvider endpoint={rpcURL}>
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <div style={{ display: "flex", justifyContent: "space-between"}}>
             <WalletMultiButton />
             <WalletDisconnectButton />
             <RequestAirdrop />
-          </div>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

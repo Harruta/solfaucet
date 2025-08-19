@@ -12,7 +12,7 @@ export function RequestAirdrop(){
             wallet.publicKey,
             amount * LAMPORTS_PER_SOL
         );
-        alert("Airdroped " + amount + "SOL to" + wallet.toBase58());
+        alert("Airdroped " + amount + " SOL to " + wallet.publicKey.toBase58());
     }
     return (
         <div>
