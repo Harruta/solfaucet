@@ -2,6 +2,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useConnection } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
+
 export function RequestAirdrop(){
     const wallet = useWallet();
     const { connection } = useConnection();
