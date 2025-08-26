@@ -7,6 +7,7 @@ import "@solana/wallet-adapter-react-ui/styles.css"
 import { RequestAirdrop } from "./airdrop";
 import { ShowSolBalance } from "./showbalance";
 import { SendTokens } from "./sendsol";
+import { SignMessage } from "./SignMessage";
 
 function App() {
   const network = WalletAdapterNetwork.Devnet;
@@ -20,6 +21,7 @@ function App() {
             <WalletDisconnectButton />
             <RequestAirdrop />
             <SendTokens/>
+            <SignMessage/>
             <ShowSolBalance/>
         </WalletModalProvider>
       </WalletProvider>
